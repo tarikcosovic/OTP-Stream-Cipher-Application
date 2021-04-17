@@ -1,0 +1,12 @@
+C:\Users\tarik\source\repos\Stream Cipher\bin\Debug\Stream Cipher.exe.config
+C:\Users\tarik\source\repos\Stream Cipher\bin\Debug\Stream Cipher.exe
+C:\Users\tarik\source\repos\Stream Cipher\bin\Debug\Stream Cipher.pdb
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.csprojAssemblyReference.cache
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream_Cipher.Form1.resources
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream_Cipher.Properties.Resources.resources
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.csproj.GenerateResource.cache
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.csproj.CoreCompileInputs.cache
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.exe
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.pdb
+C:\Users\tarik\source\repos\Stream Cipher\bin\Debug\MaterialSkin.dll
+C:\Users\tarik\source\repos\Stream Cipher\obj\Debug\Stream Cipher.csproj.CopyComplete
