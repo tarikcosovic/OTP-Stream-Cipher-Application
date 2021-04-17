@@ -72,7 +72,7 @@ namespace Stream_Cipher
 
             public async static Task<byte[]> MultiThreadingXor(byte[] firstArray, byte[] secondArray)
             {
-                int numberOfAvailableThreads = Process.GetCurrentProcess().Threads.Count;
+                int numberOfAvailableThreads = Process.GetCurrentProcess().Threads.Count / (3 - Properties.Settings.Default.coreUtilizationCount);
 
                 #region SeperatingChunks
 
@@ -103,27 +103,46 @@ namespace Stream_Cipher
 
                 #region ParallelThreadingXor
 
-                //Fix the multi threading Tasks..
+                //Start MultiThreading
 
-                List<Task<byte[]>> tasks = new List<Task<byte[]>>();
+                /*List<Task<byte[]>> tasks = new List<Task<byte[]>>();
 
                 for(int i = 0; i < numberOfAvailableThreads - 1; i++)
                 {
                     tasks.Add(Task.Run(() => GetXor(firstArrayChunks[i], secondArrayChunks[i])));
                 }
 
-                var results = await Task.WhenAll(tasks);
+                var results = await Task.WhenAll(tasks);*/
 
+                //End MultiThreading
+
+
+                /* SECOND ATTEMPT AT PARALLEL
+                Task[] tasks = new Task[numberOfAvailableThreads];
+                byte[][] resultArray = new byte[tasks.Length][];
+
+                for(int i = 0; i < numberOfAvailableThreads; i++)
+                {
+                    tasks[i] = Task.Factory.StartNew(() => resultArray[i] = GetXor(firstArrayChunks[i], secondArrayChunks[i]));
+                }
+
+                Task.WaitAll(tasks);
+                */
+
+                /*
                 byte[] response = new byte[firstArray.Length];
 
-                foreach(var byteArray in results)
+                for (int i = 0; i < firstArray.Length; i++)
+                    response[i] = resultArray[i][resultArray[i].Length - i - 1];
+
+                /*foreach(var byteArray in resultArray)
                 {
                     System.Buffer.BlockCopy(byteArray, 0, response, response.Length, byteArray.Length);
-                }
+                }*/
 
                 #endregion
 
-                return response;
+                return null;
             }
 
             public static byte[] addByteToArray(byte[] bArray, byte newByte)

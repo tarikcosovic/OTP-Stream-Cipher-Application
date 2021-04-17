@@ -46,5 +46,17 @@ namespace Stream_Cipher.Properties {
                 this["isLightThemeEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int coreUtilizationCount {
+            get {
+                return ((int)(this["coreUtilizationCount"]));
+            }
+            set {
+                this["coreUtilizationCount"] = value;
+            }
+        }
     }
 }
